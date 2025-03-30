@@ -1,0 +1,468 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #FFCF4D;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    height: 40px;
+}
+
+.logo h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* ... (your existing CSS) ... */
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: 600; /* Make the font broader */
+    position: relative; /* Needed for pseudo-element */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* Start with 0 width */
+    height: 2px;
+    bottom: -5px; /* Adjust position */
+    left: 0;
+    background-color: #020508; /* Underline color */
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out; /* Smooth underline transition */
+}
+
+nav a:hover {
+    color: #000204; /* Change color on hover */
+}
+
+nav a:hover::after {
+    transform: scaleX(1); /* Expand underline to full width */
+}
+
+
+
+/* CSS for the hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Reduced gap */
+    min-height: 100vh;
+    background: #FFCF4D;
+    padding: 20px;
+
+}
+
+/* Styling for the content section */
+.content {
+    max-width: 400px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the text */
+}
+
+/* Header styling */
+.content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #0b0101;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling with bold and aligned text */
+.content p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 350px;
+    margin-bottom: 15px;
+    
+}
+
+.resume-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    }
+    
+    .resume-button:hover {
+    background-color: #333;
+    }
+
+
+    .circular-image {
+        width: 480px;  /* Set width for circle */
+        height: 480px; /* Same as width to maintain circle */
+        border-radius: 50%; /* Makes it a perfect circle */
+        overflow: hidden; /* Ensures no extra content appears outside */
+        display: flex;
+        background-color: #000;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Centers the image */
+        border: 4px solid #0c0c0c; /* Optional: Adds a white border for better visibility */
+    }
+    
+    .circular-image img {
+        width: 100%;  /* Ensures image fits inside the circle */
+        height: 100%;
+        object-fit: cover; /* Ensures image fills the circle without distortion */
+    }
+
+
+/* Animation Effects */
+
+/* Fade-in effect for the heading */
+.content h1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Slide-in from left effect for the paragraph */
+  .content p {
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  /* Scale-up effect for the resume button on hover */
+  .resume-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-20px); /* Slide from left */
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+section {
+    padding: 0px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+/* ... (your existing CSS) ... */
+
+
+.about-section {
+padding: 50px;
+background-color:#f2e7c9;
+height: 100vh;
+
+}
+
+.about-section h1 {
+text-align: center;
+margin-bottom: 20px;
+font-size: 30px;
+color: #333;
+text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.about-container {
+display: flex;
+align-items: center;
+gap: 40px;
+}
+
+.about-photo {
+flex: 1.6;
+box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+border-radius: 10px;
+overflow: hidden;
+}
+
+.about-photo img {
+width: 100%;
+height: auto;
+transition: transform 0.3s ease;
+}
+
+
+
+.about-text-box {
+flex: 2.5;
+padding: 20px;
+background-color: #f4d47e;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(44, 40, 34, 0.1);
+transition: box-shadow 0.3s ease;
+margin: 40px;
+}
+
+.about-text-box:hover {
+box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+.about-text-box:hover {
+    transform: scale(1.1);
+    }
+
+/* ... (your existing CSS) ... */
+
+.skills-section {
+    background-color: #fff8ea;
+    padding: 50px 0;
+    height: 100vh;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid; /* Change to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Gap between grid items */
+    margin-top: 30px;
+}
+
+.skill-box {
+    background-color: #f6e8c1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.skill-box h3 {
+    margin-bottom: 10px;
+}
+
+.skill-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.skill-box li {
+    margin-bottom: 5px;
+}
+
+/* Hover effect */
+.skill-box:hover {
+    transform: translateY(-5px); /* Move box up slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow */
+    background-color: #fff9df; /* Light blue background */
+}
+
+.skill-box:hover h3 {
+    color: #f4c857; /* Blue heading on hover */
+}
+
+
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    gap: 30px; /* Adds space between images */
+    margin-top: 30px; /* Adds space from the previous content */
+}
+
+.image-container img {
+    width: 340px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+
+/* ... (your existing CSS) ... */
+
+
+.work-section {
+    background-color: #fff8ea;
+    padding: 50px 0;
+    height: 100vh;
+}
+
+.work-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ... (your existing CSS) ... */
+
+.work-grid {
+    display: flex;
+    justify-content: center; /* Keep space-around for even spacing */
+    margin-top: 0px;
+}
+
+.work-box {
+    background-color: rgba(239, 217, 171, 0.808);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: %; /* Adjust width for spacing */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px; /* Add margin for spacing */
+}
+
+/* ... (rest of your CSS) ... */
+
+.work-box h3 {
+    margin-bottom: 10px;
+}
+
+.details-button {
+    background-color: #0c0600e5;
+    color: #fcfeff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Hover Effect for Work Boxes */
+.work-box:hover {
+    transform: translateY(-5px); /* Move box up slightly */
+    box-shadow: 0 4px 8px rgba(232, 181, 118, 0.2); /* Increase shadow */
+    background-color: #f6f1ef; /* Light blue background */
+}
+
+.work-box:hover h3 {
+    color: #010408; /* Blue heading on hover */
+}
+
+.work-box:hover p {
+    color: #333; /* Darker text on hover */
+}
+.work-images {
+    display: flex;
+    justify-content: center; /* Aligns images in the center */
+    gap: 20px; /* Space between images */
+    margin-top: 20px; /* Space from other content */
+    flex-wrap: wrap; /* Wrap images if screen is small */
+}
+
+.work-images img {
+    width: 280px; /* Adjust size as needed */
+    height: auto; /* Keeps the aspect ratio */
+    border-radius: 8px; /* Optional rounded corners */
+    transition: transform 0.3s ease-in-out; /* Hover effect */
+}
+
+#Portfolio{
+    margin-top: -100px; /* Adjust this value as needed */
+}
+
+
+
+
+.contact-section {
+    background-color: #FFCF4D;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-link {
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.contact-link img {
+    width: 40px; /* Adjust logo size */
+    height: auto;
+}
+
+
+.email-logo {
+    vertical-align: middle;
+    margin-right: 5px;
+    height: 30px; /* Adjust as needed */
+    /* Add any other styling you want */
+  }
+
